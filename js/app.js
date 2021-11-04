@@ -23,6 +23,22 @@ window.addEventListener('scroll', () => {
           navbar.classList.remove('actives');
      }
 });
+
+function circularText(txt, radius, classIndex) {
+     txt = txt.split(""),
+       classIndex = document.getElementsByClassName("circTxt")[classIndex];
+   
+     var deg = 360 / txt.length,
+       origin = 0;
+   
+     txt.forEach((ea) => {
+       ea = `<p style='height:${radius}px;position:absolute;transform:rotate(${origin}deg);transform-origin:0 100%'>${ea}</p>`;
+       classIndex.innerHTML += ea;
+       origin += deg;
+     });
+   }
+   
+   circularText("Inspiration from BEHANCE ", 90, 0);
 //End Nav
 
 //Start Profile
@@ -32,8 +48,8 @@ const img = document.querySelector('.img-container img');
 window.addEventListener('scroll', () => {
      const scroll = window.scrollY;
 
-     if(scroll >= 700){
-          imgcontainer.style.animation = `imgcontani ${1}s linear`;
+     if(scroll >= 500){
+          // imgcontainer.style.animation = `imgcontani ${1}s linear`;
           img.style.animation = `imgani ${1}s linear`;
           img.style.opacity = `1`;
      }
