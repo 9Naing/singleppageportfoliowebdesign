@@ -38,7 +38,7 @@ function circularText(txt, radius, classIndex) {
      });
    }
    
-   circularText("Inspiration from BEHANCE ", 90, 0);
+   circularText("Inspiration from akshay roy ", 90, 0);
 //End Nav
 
 //Start Profile
